@@ -1,0 +1,31 @@
+extends javascript_node
+global !p
+def to_camel_case(snake_str, split_str='-'):
+  from os.path import basename
+  fileName = basename(snake_str)
+
+  components = fileName.split(split_str)
+  if not components:
+    return ""
+  return  components[0] + "".join(x.title() for x in components[1:])
+endglobal
+
+snippet req "CommonJS Require"
+const ${2:`!p snip.rv = to_camel_case(t[1])`} = require('${1:path}')$0
+endsnippet
+
+snippet imp "Harmony Import"
+import ${2:`!p snip.rv = to_camel_case(t[1])`} from '${1:path}'$0
+endsnippet
+
+snippet => "Arrow Function"
+($1) => {$0}
+endsnippet
+
+snippet =>r "Rambda Function"
+($1) => ($0)
+endsnippet
+
+snippet log "Log"
+console.log($1${VISUAL});
+endsnippet
