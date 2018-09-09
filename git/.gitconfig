@@ -1,5 +1,5 @@
 [user]
 	name = Mondo
 	email = mondogao@gmail.com
-[diff]
-	tool = opendiff
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX

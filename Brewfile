@@ -26,6 +26,8 @@ brew "tree"
 brew "vim"
 brew "yarn"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
+brew "tmux"
+brew "diff-so-fancy"
 cask "dotnet"
 cask "font-anonymouspro-nerd-font"
 cask "mounty"
