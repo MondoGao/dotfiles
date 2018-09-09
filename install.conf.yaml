@@ -10,18 +10,20 @@
 
 - shell:
   - command -v brew >/dev/null || $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  - brew tap Homebrew/bundle && brew bundle --no-upgrade
+  - "[ '$(brew tap | grep bundle)' ] && brew tap Homebrew/bundle"
+  - brew bundle --no-upgrade
 
 - shell:
   - $(brew --prefix)/opt/fzf/install --all
 
 - shell:
-  - yarn global add typescript tldr prettier neovim-node-host nodemon whistle
+  - yarn global add typescript tldr prettier nodemon whistle
 
 - link:
     ~/.dotfiles: ''
     ~/.sh: sh
     ~/.zshrc: zsh/.zshrc
+    ~/.zsh: zsh/.zsh
     ~/.gitconfig: git/.gitconfig
     ~/.config/nvim: ~
     ~/.tern-config: .tern-config
