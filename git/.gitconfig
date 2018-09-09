@@ -1,0 +1,5 @@
+[user]
+	name = Mondo
+	email = mondogao@gmail.com
+[diff]
+	tool = opendiff

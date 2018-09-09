@@ -7,10 +7,8 @@
 
 - link:
     ~/.dotfiles: ''
-
-- link:
     ~/.sh: sh
     ~/.zshrc: zsh/.zshrc
-
-- link:
+    ~/.gitconfig: git/.gitconfig
     ~/.config/nvim: ~
+    ~/.tern-config: .tern-config
