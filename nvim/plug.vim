@@ -50,7 +50,7 @@ if has('mac')
 endif
 
 " Workspace & File Management
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-ctrlspace/vim-ctrlspace'
 let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 let g:CtrlSpaceUseTabline = 1
