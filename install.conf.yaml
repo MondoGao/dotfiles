@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- clean:
+    - '~'
+
+- link:
+    ~/.dotfiles: ''
+
+- link:
+    ~/.sh: sh
+    ~/.zshrc: zsh/.zshrc
+
+- link:
+    ~/.config/nvim: ~
