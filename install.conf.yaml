@@ -29,3 +29,8 @@
     ~/.tern-config: .tern-config
     ~/.tmux.conf: ./tmux/gpakosz/.tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
+
+- shell:
+  - source ~/.zshrc
+  - gem install tmuxinator neovim
+  - pip install neovim

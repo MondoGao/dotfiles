@@ -28,6 +28,7 @@ brew "yarn"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "tmux"
 brew "diff-so-fancy"
+brew "reattach-to-user-namespace"
 cask "dotnet"
 cask "font-anonymouspro-nerd-font"
 cask "mounty"
