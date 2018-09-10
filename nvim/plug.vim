@@ -109,11 +109,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='codedark'
 " Plug 'gcmt/taboo.vim'
 " let g:taboo_tabline = 0
 
 Plug 'flazz/vim-colorschemes'
+Plug 'tomasiser/vim-code-dark'
 Plug 'ryanoasis/vim-devicons'
 Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_enable_on_vim_startup = 1
