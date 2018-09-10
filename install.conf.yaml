@@ -29,6 +29,7 @@
     ~/.tern-config: .tern-config
     ~/.tmux.conf: ./tmux/gpakosz/.tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
+    ~/.sh/.launchTmuxByDefault: tmux/.launchTmuxByDefault
 
 - shell:
   - source ~/.zshrc

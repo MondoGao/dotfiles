@@ -1,0 +1,5 @@
+if [[ "$TERM" != "screen-256color" ]]
+then
+  tmux a -t "${WINDOW:-$USER}" || tmux new -s "${WINDOW:-$USER}"
+  exit
+fi
