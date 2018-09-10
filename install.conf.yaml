@@ -27,3 +27,5 @@
     ~/.gitconfig: git/.gitconfig
     ~/.config/nvim: ~
     ~/.tern-config: .tern-config
+    ~/.tmux.conf: ./tmux/gpakosz/.tmux.conf
+    ~/.tmux.conf.local: tmux/tmux.conf.local
