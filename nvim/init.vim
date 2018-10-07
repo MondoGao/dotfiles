@@ -38,7 +38,7 @@ let g:configFolder = fnamemodify(expand("<sfile>"), ':h:p')
 execute 'source' g:configFolder.'/plug.vim'
 execute 'source' g:configFolder.'/colorscheme.vim'
 execute 'source' g:configFolder.'/keymap.vim'
-execute 'source' g:configFolder.'/mode.vim'
+" execute 'source' g:configFolder.'/mode.vim'
 
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
