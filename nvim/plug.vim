@@ -122,39 +122,47 @@ Plug 'luochen1990/rainbow'
 let g:rainbow_active = 1
 
 " Language Supports
-Plug 'moll/vim-node'
-Plug 'styled-components/vim-styled-components'
-Plug 'plasticboy/vim-markdown'
-let g:vim_markdown_folding_level = 1
-let g:vim_markdown_folding_disabled = 1
 
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
-let g:tsuquyomi_disable_default_mappings = 1
+"" Javascript/Typescript
+" Plug 'moll/vim-node'
+" Plug 'Quramy/tsuquyomi'
+" let g:tsuquyomi_disable_default_mappings = 1
+" Plug 'leafgarland/typescript-vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'neoclide/vim-jsx-improve'
 
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'othree/yajs.vim'
+Plug 'elzr/vim-json'
+
+"" HTML/XML
+Plug 'digitaltoad/vim-pug'
+Plug 'dNitro/vim-pug-complete'
+" Plug 'chemzqm/wxapp.vim'
+
+"" CSS
+" Plug 'styled-components/vim-styled-components'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'stephenway/postcss.vim'
 Plug 'posva/vim-vue'
 Plug 'ap/vim-css-color'
-Plug 'elzr/vim-json'
-Plug 'digitaltoad/vim-pug'
-Plug 'dNitro/vim-pug-complete'
 
-Plug 'elmcast/elm-vim'
-let g:elm_setup_keybindings = 0
-Plug 'jparise/vim-graphql'
-Plug 'neovimhaskell/haskell-vim'
+"" Others
+" Plug 'elmcast/elm-vim'
+" let g:elm_setup_keybindings = 0
 " Plug 'reasonml-editor/vim-reason'
 " Plug 'OrangeT/vim-csharp'
 " Plug 'OmniSharp/omnisharp-vim'
+
+Plug 'plasticboy/vim-markdown'
+let g:vim_markdown_folding_level = 1
+let g:vim_markdown_folding_disabled = 1
+
+Plug 'jparise/vim-graphql'
+Plug 'neovimhaskell/haskell-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-Plug 'pangloss/vim-javascript'
-Plug 'neoclide/vim-jsx-improve'
-
-Plug 'chemzqm/wxapp.vim'
-
-" Plantuml
+""" Plantuml
 Plug 'aklt/plantuml-syntax'
 let g:plantuml_executable_script = 'java -jar '.$HOME.'/Bin/plantuml.jar -tsvg $@'
 Plug 'scrooloose/vim-slumlord'
