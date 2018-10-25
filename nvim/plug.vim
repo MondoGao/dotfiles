@@ -204,6 +204,11 @@ let g:polyglot_disabled = ['javascript', 'typescript', 'json', 'css', 'markdown'
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
+" Others
+if has('mac')
+	Plug 'CodeFalling/fcitx-vim-osx'
+endif
+
 call plug#end()
 
 if executable('ag')

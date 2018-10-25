@@ -29,6 +29,7 @@ brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "tmux"
 brew "diff-so-fancy"
 brew "reattach-to-user-namespace"
+brew "fcitx-remote-for-osx"
 cask "dotnet"
 cask "font-anonymouspro-nerd-font"
 cask "mounty"
