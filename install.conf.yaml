@@ -14,10 +14,9 @@
   - brew bundle --no-upgrade
 
 - shell:
-  - $(brew --prefix)/opt/fzf/install --all
-
-- shell:
-  - yarn global add typescript tldr prettier nodemon whistle
+  # - $(brew --prefix)/opt/fzf/install --all
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  - rm ~/.zshrc
 
 - link:
     ~/.dotfiles: ''
@@ -32,6 +31,14 @@
     ~/.sh/.launchTmuxByDefault: tmux/.launchTmuxByDefault
 
 - shell:
+  - yarn global add typescript tldr prettier nodemon whistle
+
+- shell:
   - source ~/.zshrc
-  - gem install tmuxinator neovim
+  - "[ -d $(pyenv root)/plugins/pyenv-virtualenv ] || git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv"
+  - pyenv install 3.7.1
+  - pyenv install 2.7.15
   - pip install neovim
+
+- shell:
+  - gem install tmuxinator neovim
