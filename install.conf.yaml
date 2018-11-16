@@ -11,7 +11,7 @@
 - shell:
   - command -v brew >/dev/null || $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   - "[ '$(brew tap | grep bundle)' ] && brew tap Homebrew/bundle"
-  - brew bundle --no-upgrade
+  - brew cask list | grep -q `awk -F "\"" 'END{ print $2 }' Brewfile` || brew bundle --no-upgrade
 
 - shell:
   # - $(brew --prefix)/opt/fzf/install --all
@@ -31,14 +31,34 @@
     ~/.sh/.launchTmuxByDefault: tmux/.launchTmuxByDefault
 
 - shell:
-  - yarn global add typescript tldr prettier nodemon whistle
-
-- shell:
   - source ~/.zshrc
-  - "[ -d $(pyenv root)/plugins/pyenv-virtualenv ] || git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv"
-  - pyenv install 3.7.1
-  - pyenv install 2.7.15
-  - pip install neovim
+  - "[ -d $HOME/.local/share/nvim/backup ] || mkdir $HOME/.local/share/nvim/backup"
 
 - shell:
+  - xcode-select --install
+  - pkgutil --pkgs | grep -q macOS_SDK_headers_for_macOS_10.14 || sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+
+- shell:
+  - command -v nvm >/dev/null || curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+- shell:
+  - yarn global list | grep -q whistle || yarn global add typescript tldr prettier nodemon whistle
+
+- shell:
+  - "[ -d $(pyenv root)/plugins/pyenv-virtualenv ] || git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv"
+  - eval "$(pyenv init -)"
+  - eval "$(pyenv virtualenv-init -)"
+  - pyenv versions | grep -q 3.7.1 || PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.7.1
+  - pyenv versions | grep -q 2.7.15 || pyenv install 2.7.15
+  - pyenv virtualenv 3.7.15 neovim2
+  - pyenv virtualenv 2.7.1 neovim3
+  - pyenv shell neovim2
+  - pip install neovim
+  - pyenv shell neovim3
+  - pip install neovim
+  - pyenv global 3.7.15
+
+- shell:
+  - rbenv versions | grep -q 2.5.3 || rbenv install 2.5.3
+  - rbenv global 2.5.3
   - gem install tmuxinator neovim
