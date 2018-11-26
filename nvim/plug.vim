@@ -153,11 +153,12 @@ let g:rainbow_active = 1
 
 "" Javascript/Typescript
 " Plug 'moll/vim-node'
-" Plug 'Quramy/tsuquyomi'
 " let g:tsuquyomi_disable_default_mappings = 1
-" Plug 'leafgarland/typescript-vim'
 " Plug 'pangloss/vim-javascript'
 " Plug 'neoclide/vim-jsx-improve'
+"
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'othree/yajs.vim'

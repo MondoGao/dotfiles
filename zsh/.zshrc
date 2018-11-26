@@ -52,7 +52,7 @@ ZSH_CUSTOM=$HOME/.zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(colored-man-pages colorize copydir extract zsh-history-substring-search history fasd \
   zsh-completions zsh-autosuggestions zsh-syntax-highlighting \
-  git npm node yarn vi-mode sudo rbenv docker docker-compose docker-machine)
+  tmux git npm node yarn vi-mode sudo rbenv docker docker-compose docker-machine)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,26 +85,26 @@ source $HOME/.sh/index.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # nvm auto use
-# autoload -U add-zsh-hook
-# load-nvmrc() {
-#     local node_version="$(nvm version)"
-#     local nvmrc_path="$(nvm_find_nvmrc)"
+autoload -U add-zsh-hook
+load-nvmrc() {
+    local node_version="$(nvm version)"
+    local nvmrc_path="$(nvm_find_nvmrc)"
 
-#     if [ -n "$nvmrc_path" ]; then
-#         local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    if [ -n "$nvmrc_path" ]; then
+        local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
-#         if [ "$nvmrc_node_version" = "N/A" ]; then
-#             nvm install
-#         elif [ "$nvmrc_node_version" != "$node_version" ]; then
-#             nvm use
-#         fi
-#     elif [ "$node_version" != "$(nvm version default)" ]; then
-#         echo "Reverting to nvm default version"
-#         nvm use default
-#     fi
-# }
-# add-zsh-hook chpwd load-nvmrc
-# load-nvmrc
+        if [ "$nvmrc_node_version" = "N/A" ]; then
+            nvm install
+        elif [ "$nvmrc_node_version" != "$node_version" ]; then
+            nvm use
+        fi
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+        echo "Reverting to nvm default version"
+        nvm use default
+    fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
