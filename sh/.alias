@@ -13,4 +13,5 @@ alias ping="prettyping --nolegend"
 alias top="htop" # alias top and fix high sierra bug
 alias difff="diff-so-fancy"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias ls="exa"
 
