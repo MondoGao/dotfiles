@@ -1,0 +1,1 @@
+/Users/mondo/Workspace/dotfiles/tmux/.launchTmuxByDefault

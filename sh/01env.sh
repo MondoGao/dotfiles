@@ -3,11 +3,5 @@ export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
 
 export PATH="/usr/local/sbin:$HOME/Bin:$HOME/.local/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 # export http_proxy=http://localhost:1087
 # export https_proxy=http://localhost:1087
