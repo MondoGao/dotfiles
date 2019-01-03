@@ -96,6 +96,7 @@ let g:ycm_filetype_blacklist = {
 			\ 'haskell': 1
       \}
 
+" deoplete is disabled by default, call #enable in ftplugins
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -182,6 +183,8 @@ Plug 'ap/vim-css-color'
 " Plug 'reasonml-editor/vim-reason'
 " Plug 'OrangeT/vim-csharp'
 " Plug 'OmniSharp/omnisharp-vim'
+Plug 'vim-latex/vim-latex'
+let g:tex_flavor='latex'
 
 Plug 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_level = 1
