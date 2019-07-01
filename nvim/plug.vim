@@ -194,6 +194,8 @@ Plug 'jparise/vim-graphql'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
+Plug 'rust-lang/rust.vim'
+
 """ Plantuml
 Plug 'aklt/plantuml-syntax'
 let g:plantuml_executable_script = 'java -jar '.$HOME.'/Bin/plantuml.jar -tsvg $@'
