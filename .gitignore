@@ -1,1 +1,3 @@
 sh/.launchTmuxByDefault
+.DS_Store
+*.log

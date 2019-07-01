@@ -13,3 +13,6 @@
 [submodule "tmux/gpakosz"]
 	path = tmux/gpakosz
 	url = git@github.com:gpakosz/.tmux.git
+[submodule "zsh/.zsh/plugins/zsh-history-substring-search"]
+	path = zsh/.zsh/plugins/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
