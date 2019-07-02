@@ -1,6 +1,6 @@
 [user]
-	name = Mondo
-	email = mondogao@gmail.com
+	name = 冬鸫
+	email = gaohua.jgh@alibaba-inc.com
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [pull]

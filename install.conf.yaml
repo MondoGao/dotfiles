@@ -29,6 +29,7 @@
     ~/.tmux.conf: ./tmux/gpakosz/.tmux.conf
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.sh/.launchTmuxByDefault: tmux/.launchTmuxByDefault
+    ~/.czrc: git/.czrc
 
 - shell:
   - source ~/.zshrc
@@ -42,7 +43,7 @@
   - command -v nvm >/dev/null || curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 - shell:
-  - yarn global list | grep -q whistle || yarn global add typescript tldr prettier nodemon whistle neovim
+  - yarn global list | grep -q whistle || yarn global add typescript tldr prettier nodemon whistle neovim commitizen cz-conventional-changelog
 
 - shell:
   - "[ -d $(pyenv root)/plugins/pyenv-virtualenv ] || git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv"
@@ -60,3 +61,7 @@
   - rbenv versions | grep -q 2.6.3 || rbenv install 2.6.3
   - rbenv global 2.6.3
   - gem install tmuxinator neovim
+
+- shell:
+  - curl https://sh.rustup.rs -sSf | sh
+
