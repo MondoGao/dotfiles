@@ -30,6 +30,7 @@
     ~/.tmux.conf.local: tmux/tmux.conf.local
     ~/.sh/.launchTmuxByDefault: tmux/.launchTmuxByDefault
     ~/.czrc: git/.czrc
+    ~/.proxychains: proxychains
 
 - shell:
   - source ~/.zshrc

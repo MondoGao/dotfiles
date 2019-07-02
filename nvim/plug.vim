@@ -212,7 +212,7 @@ let g:jsx_ext_required = 0
 
 " Others
 if has('mac')
-	Plug 'CodeFalling/fcitx-vim-osx'
+	" Plug 'CodeFalling/fcitx-vim-osx'
 endif
 
 call plug#end()
