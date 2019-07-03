@@ -15,3 +15,4 @@ alias difff="diff-so-fancy"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias ls="exa"
 
+alias gcz="git cz"

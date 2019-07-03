@@ -19,6 +19,7 @@ brew "graphviz"
 brew "htop"
 brew "jq"
 brew "make"
+brew "mas"
 brew "ncdu"
 brew "neovim"
 brew "pandoc"
@@ -39,6 +40,7 @@ cask "alfred3"
 cask "bartender"
 cask "bettertouchtool"
 cask "contexts"
+cask "daisydisk"
 cask "dash"
 cask "default-folder-x"
 cask "docker"
@@ -48,8 +50,10 @@ cask "font-anonymouspro-nerd-font"
 cask "font-firacode-nerd-font"
 cask "font-hack-nerd-font"
 cask "hazeover"
+cask "iina"
 cask "istat-menus"
 cask "iterm2"
+cask "kindle"
 cask "loginputmac"
 cask "mosaic"
 cask "mounty"
@@ -64,3 +68,10 @@ cask "timing"
 cask "visual-studio-code"
 cask "vmware-fusion"
 cask "xquartz"
+mas "HazeOver", id: 430798174
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Spark", id: 1176895641
+mas "Xcode", id: 497799835
+mas "Yoink", id: 457622435

@@ -9,6 +9,10 @@
   - '~'
 
 - shell:
+  - defaults write -g ApplePressAndHoldEnabled -bool false
+
+
+- shell:
   - command -v brew >/dev/null || $(which ruby) -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   - "[ '$(brew tap | grep bundle)' ] && brew tap Homebrew/bundle"
   - brew cask list | grep -q `awk -F "\"" 'END{ print $2 }' Brewfile` || brew bundle --no-upgrade
@@ -64,5 +68,5 @@
   - gem install tmuxinator neovim
 
 - shell:
-  - curl https://sh.rustup.rs -sSf | sh
+  - rustup || curl https://sh.rustup.rs -sSf | sh
 
