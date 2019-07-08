@@ -1,4 +1,4 @@
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && ([ ! -z "$WINDOW" ] || [ ! -z "$ITERM_PROFILE" ])
 then
   tmux a -t "${WINDOW:-$USER}" || tmux new -s "${WINDOW:-$USER}"
 fi
