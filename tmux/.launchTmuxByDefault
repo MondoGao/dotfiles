@@ -1,4 +1,7 @@
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && ([ ! -z "$WINDOW" ] || [ ! -z "$ITERM_PROFILE" ])
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ ! -z "$ITERM_PROFILE" ]
+
+# enable tmux in vscode
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && ([ ! -z "$WINDOW" ] || [ ! -z "$ITERM_PROFILE" ])
 then
   tmux a -t "${WINDOW:-$USER}" || tmux new -s "${WINDOW:-$USER}"
 fi
