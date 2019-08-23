@@ -3,7 +3,11 @@
 	email = gaohua.jgh@alibaba-inc.com
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	attributesfile = /Users/mondo/.gitattributes
 [pull]
 	rebase = true
 [alias]
 	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
+[filter "ignoreMark"]
+	; clean = "sed '/MARK/'d"
+	; smudge = cat

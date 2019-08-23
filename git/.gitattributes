@@ -1,0 +1,2 @@
+*.js filter=ignoreMark
+*.ts filter=ignoreMark

@@ -28,6 +28,7 @@
     ~/.zshrc: zsh/.zshrc
     ~/.zsh: zsh/.zsh
     ~/.gitconfig: git/.gitconfig
+    ~/.gitattributes: git/.gitattributes
     ~/.config/nvim: ~
     ~/.tern-config: .tern-config
     ~/.tmux.conf: ./tmux/gpakosz/.tmux.conf
