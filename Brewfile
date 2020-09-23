@@ -12,6 +12,7 @@ brew "diff-so-fancy"
 brew "exa"
 brew "fasd"
 brew "fcitx-remote-for-osx"
+brew "ffmpeg"
 brew "fzf"
 brew "gcc"
 brew "git"
@@ -19,18 +20,25 @@ brew "go"
 brew "graphviz"
 brew "htop"
 brew "jq"
+brew "luarocks"
 brew "make"
 brew "mas"
+brew "openjdk"
+brew "maven"
+brew "mtr"
 brew "ncdu"
-brew "neovim"
+brew "neovim", link: false
 brew "pandoc"
 brew "plantuml"
 brew "prettyping"
 brew "proxychains-ng"
+brew "pstree"
 brew "pyenv"
 brew "rbenv"
 brew "redis"
 brew "rustup-init"
+brew "scrcpy"
+brew "shellcheck"
 brew "the_silver_searcher"
 brew "thefuck"
 brew "tmux"
@@ -41,6 +49,7 @@ brew "yarn"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
 brew "v2ray/v2ray/v2ray-core"
 cask "1password"
+cask "acorn"
 cask "alfred3"
 cask "android-platform-tools"
 cask "android-studio"
@@ -59,6 +68,7 @@ cask "folx"
 cask "font-anonymouspro-nerd-font"
 cask "font-firacode-nerd-font"
 cask "font-hack-nerd-font"
+cask "font-jetbrains-mono"
 cask "hazeover"
 cask "iina"
 cask "istat-menus"
@@ -74,6 +84,7 @@ cask "ogdesign-eagle"
 cask "omnifocus"
 cask "paw"
 cask "pdfelement"
+cask "pomotodo"
 cask "shadowsocksx-ng-r"
 cask "snipaste"
 cask "steam"
@@ -81,11 +92,18 @@ cask "timing"
 cask "visual-studio-code"
 cask "vmware-fusion"
 cask "xquartz"
+mas "Clarity Wallpaper", id: 1469525516
+mas "Compressor", id: 424390742
+mas "Final Cut Pro", id: 424389933
 mas "GarageBand", id: 682658836
 mas "Gifox", id: 1082624744
 mas "HazeOver", id: 430798174
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Logic Pro X", id: 634148309
+mas "Magnet", id: 441258766
+mas "MainStage 3", id: 634159523
+mas "Motion", id: 434290957
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Spark", id: 1176895641

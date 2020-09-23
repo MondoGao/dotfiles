@@ -11,3 +11,5 @@
 [filter "ignoreMark"]
 	; clean = "sed '/MARK/'d"
 	; smudge = cat
+[include]
+	path = /Users/mondo/.git-repo/gitconfig
