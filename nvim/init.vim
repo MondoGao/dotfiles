@@ -9,6 +9,7 @@ set hidden
 set updatetime=250
 set exrc
 filetype plugin indent on
+set foldmethod=syntax
 
 set smartcase
 set ignorecase

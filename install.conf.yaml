@@ -46,7 +46,7 @@
   - pkgutil --pkgs | grep -q macOS_SDK_headers_for_macOS_10.14 || sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
 
 - shell:
-  - command -v nvm >/dev/null || curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+  - command -v nvm >/dev/null || curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
 
 - shell:
   - yarn global list | grep -q whistle || yarn global add typescript tldr prettier nodemon whistle neovim commitizen cz-conventional-changelog
@@ -55,13 +55,13 @@
   - "[ -d $(pyenv root)/plugins/pyenv-virtualenv ] || git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv"
   - eval "$(pyenv init -)"
   - eval "$(pyenv virtualenv-init -)"
-  - pyenv versions | grep -q 3.7.3 || PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.7.3
+  - pyenv versions | grep -q 3.8.5 || PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.8.5
   - pyenv versions | grep -q 2.7.16 || pyenv install 2.7.16
   - pyenv virtualenv 2.7.16 neovim2
-  - pyenv virtualenv 3.7.3 neovim3
+  - pyenv virtualenv 3.8.5 neovim3
   - pyenv shell neovim2 && pip install neovim pynvim
   - pyenv shell neovim3 && pip install neovim pynvim
-  - pyenv global 3.7.15
+  - pyenv global 3.8.5
 
 - shell:
   - rbenv versions | grep -q 2.6.3 || rbenv install 2.6.3

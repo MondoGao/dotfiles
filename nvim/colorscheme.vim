@@ -1,7 +1,9 @@
 syntax on
 set termguicolors
 
-colorscheme codedark
+if !exists('g:vscode')
+	colorscheme codedark
+endif
 
 hi link jsObjectKey String
 hi link jsParens Operator
