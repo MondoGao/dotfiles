@@ -6,8 +6,12 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Editor Enhancement
+if exists('g:vscode')
+	Plug 'asvetliakov/vim-easymotion'
+else
+	Plug 'easymotion/vim-easymotion'
+endif
 Plug 'tpope/vim-repeat'
-Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
@@ -118,16 +122,16 @@ endif
 " Language Supports
 
 "" Javascript/Typescript
-" Plug 'moll/vim-node'
-" let g:tsuquyomi_disable_default_mappings = 1
-" Plug 'pangloss/vim-javascript'
-" Plug 'neoclide/vim-jsx-improve'
-"
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
+" " Plug 'moll/vim-node'
+" " let g:tsuquyomi_disable_default_mappings = 1
+" " Plug 'pangloss/vim-javascript'
+" " Plug 'neoclide/vim-jsx-improve'
 
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'othree/yajs.vim'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'Quramy/tsuquyomi'
+" 
+" Plug 'HerringtonDarkholme/yats.vim'
+" Plug 'othree/yajs.vim'
 Plug 'elzr/vim-json'
 
 "" HTML/XML
@@ -171,7 +175,7 @@ let g:plantuml_previewer#plantuml_jar_path = $HOME.'/Bin/plantuml.jar'
 Plug 'tyru/open-browser.vim'
 
 Plug 'sheerun/vim-polyglot'
-let g:polyglot_disabled = ['javascript', 'typescript', 'json', 'css', 'markdown', 'elm', 'graphql']
+let g:polyglot_disabled = ['json', 'css', 'markdown', 'elm', 'graphql']
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
 
